@@ -1,6 +1,6 @@
 [![logo](https://github.com/anhtu-pham/Parking-Spot-Detection-System/assets/80482507/bc1b2c64-1eb6-4a13-97fa-1d3123521899)](http://ec2-54-225-46-150.compute-1.amazonaws.com:8000/)
 
-# OPENSPOT: A Parking Spot Detection System
+# [OPENSPOT](http://ec2-54-225-46-150.compute-1.amazonaws.com:8000/): A Parking Spot Detection System
 
 ## Description
 OpenSpot is an IoT system that allows users to find an open parking spot in parking lots. Using an image processing solution with a machine learning approach through YOLO, OpenSpot will give real-time feedback on parking situations.
