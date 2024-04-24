@@ -19,3 +19,23 @@ A machine learning detection model like [YOLO](https://pjreddie.com/darknet/yolo
 Hardware: [Raspberry Pi 3 board](https://www.raspberrypi.com/products/raspberry-pi-3-model-b/), [Raspberry Pi Camera](https://www.raspberrypi.com/products/camera-module-v3/).
 
 Software: [OpenCV](https://opencv.org), [Socket.IO](https://socket.io), [Flask](https://flask.palletsprojects.com/en/3.0.x/).
+
+# Instructions
+
+In order to run the system, the [Raspberry Pi Camera](https://www.raspberrypi.com/products/camera-module-v3/) needs to be attached to [Raspberry Pi 3 board](https://www.raspberrypi.com/products/raspberry-pi-3-model-b/), and setup commands on Raspberry Pi 3 board terminal should be performed before working with AWS EC2 instance.
+
+On Raspberry Pi 3 board terminal, run the following commands to continuously capture images in real time and sending requests with images to AWS EC2 instance:
+```
+git clone git@github.com:anhtu-pham/Parking-Spot-Detection-System.git
+cd Parking-Spot-Detection-System/Raspberry_Pi_part/src/
+chmod a+x driver.py
+./driver.py
+```
+Then open up another terminal for AWS EC2 instance, and run the following commands to receive requests with images and prepare for updating image display on website:
+```
+git clone git@github.com:anhtu-pham/Parking-Spot-Detection-System.git
+cd Parking-Spot-Detection-System/Cloud_part/src/
+chmod a+x web_driver.py
+./web_driver.py
+```
+The website is now ready. Image streaming can be seen in the [website link](http://ec2-3-223-161-13.compute-1.amazonaws.com:5000/)
