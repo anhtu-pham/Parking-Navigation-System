@@ -50,4 +50,4 @@ cd src/
 chmod a+x web_driver.py
 ./web_driver.py
 ```
-The website is now ready. Image streaming can be seen in website link: [http://ec2-3-223-161-13.compute-1.amazonaws.com:5000/].
+The website is now ready. Image streaming can be seen in website link: http://ec2-3-223-161-13.compute-1.amazonaws.com:5000/.
