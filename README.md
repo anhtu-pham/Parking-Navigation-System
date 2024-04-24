@@ -1,4 +1,4 @@
-[![logo](https://github.com/anhtu-pham/Parking-Spot-Detection-System/assets/80482507/bc1b2c64-1eb6-4a13-97fa-1d3123521899)](http://ec2-54-225-46-150.compute-1.amazonaws.com:8000/)
+[![logo](https://github.com/anhtu-pham/Parking-Spot-Detection-System/assets/80482507/bc1b2c64-1eb6-4a13-97fa-1d3123521899)]([http://ec2-54-225-46-150.compute-1.amazonaws.com:8000/](http://ec2-3-223-161-13.compute-1.amazonaws.com:5000/)
 
 # OpenSpot: A Parking Spot Detection System
 
@@ -20,7 +20,7 @@ Hardware: [Raspberry Pi 3 board](https://www.raspberrypi.com/products/raspberry-
 
 Software: [OpenCV](https://opencv.org), [Socket.IO](https://socket.io), [Flask](https://flask.palletsprojects.com/en/3.0.x/).
 
-# Instructions
+## Instructions
 
 In order to run the system, the [Raspberry Pi Camera](https://www.raspberrypi.com/products/camera-module-v3/) needs to be attached to [Raspberry Pi 3 board](https://www.raspberrypi.com/products/raspberry-pi-3-model-b/), and setup commands on Raspberry Pi 3 board terminal should be performed before working with AWS EC2 instance.
 
