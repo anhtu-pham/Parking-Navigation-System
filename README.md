@@ -16,13 +16,6 @@ A machine learning detection model like [YOLO](https://pjreddie.com/darknet/yolo
 
 
 ## Hardware and Software Resources
-Hardware: [LAMPI](https://case.edu/issacs/education/course-introduction-connected-devices) with Raspberry Pi board, [Raspberry Pi Camera](https://www.raspberrypi.com/products/camera-module-v2/).
+Hardware: [Raspberry Pi 3 board](https://www.raspberrypi.com/products/raspberry-pi-3-model-b/), [Raspberry Pi Camera](https://www.raspberrypi.com/products/camera-module-v3/).
 
 Software: [OpenCV](https://opencv.org), [Socket.IO](https://socket.io), [Flask](https://flask.palletsprojects.com/en/3.0.x/).
-
-## Project Plan for the Next Steps
-1. Develop image processing and examine with test images.
-2. Develop real-time image processing for images captured by the camera.
-3. Improve the Web interface that we currently have for the system.
-4. Perform system testing and deploy the system.
-
