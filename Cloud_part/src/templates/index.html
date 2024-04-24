@@ -3,20 +3,77 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Final Project</title>
-    <link rel="stylesheet" type="text/css" href="styles.css">
+    <title>Streaming Parking Image</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #111; /* Dark mode background color */
+            color: #eee; /* Text color */
+            display: flex;
+            flex-direction: column; /* Stack items vertically */
+            align-items: center;
+            min-height: 100vh;
+        }
+
+        .header {
+            width: 100%;
+            background-color: #000000; /* Header background color */
+            padding: 10px; /* Adjust header padding */
+            text-align: center;
+        }
+
+        .logo {
+            max-width: 450px; /* Adjust maximum width of the logo */
+        }
+
+        .container {
+            text-align: center;
+            background-color: #1a1a1a; /* Darker container background color */
+            border-radius: 15px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3); /* Soft shadow */
+            padding: 0; /* 40px */
+            /* max-width: 800px; */
+            width: 100%; /* 90% */
+            height: 100vh;
+	    overflow: hidden;
+            margin-top: 10px; /* Adjust margin to bring the container closer */
+            margin-bottom: 10px; /* Adjust margin to bring the container closer */
+        }
+
+        .dynamic-image {
+            display: block;
+            margin: 0 auto; /* Reduce margin to bring the image closer */
+	    width: auto;
+	    height: 100vh;
+	    max-height: 100vh;
+	    max-width: 100%;
+	    /* object-fit: contain; */
+	    /* object-position: center; */
+            max-width: 100%;
+            border-radius: 15px; /* Rounded corners */
+	    box-shadow: none;
+            /* box-shadow: 0 0 20px rgba(255, 255, 255, 0.2); */ /* Soft inner glow */
+        }
+
+    </style>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/4.0.1/socket.io.js"></script>
+    <script>
+        var socket = io.connect("http://" + document.domain + ":" + location.port + "/");
+        socket.on("image_update", function(data) {
+            document.getElementById("stream").src = "data:image/jpeg;base64," + data;
+        });
+    </script>
+
 </head>
 <body>
-<div class="header">
-    <img class="logo" src="logo.png" alt="Logo">
-</div>
+<!--    <div class="header"> 
+	    <img class="logo" src="/home/ubuntu/parking_web/src/templates/logo.png" alt="Logo">
+	</div> -->
 
-<button class="get-started-button" id="getStartedButton">Get Started</button>
-    
-<div class="container" id="mainContent">
-    <img class="dynamic-image" id="dynamicImage" alt="Example Image">
-</div>
-
-<script src="script.js"></script>
+    <div class="container">
+        <img class="dynamic-image" id="stream" src="" alt="">
+    </div>
 </body>
 </html>
