@@ -24,17 +24,29 @@ Software: [OpenCV](https://opencv.org), [Socket.IO](https://socket.io), [Flask](
 
 In order to run the system, the [Raspberry Pi Camera](https://www.raspberrypi.com/products/camera-module-v3/) needs to be attached to [Raspberry Pi 3 board](https://www.raspberrypi.com/products/raspberry-pi-3-model-b/), and setup commands on Raspberry Pi 3 board terminal should be performed before working with AWS EC2 instance.
 
-On Raspberry Pi 3 board terminal, run the following commands to continuously capture images in real time and sending requests with images to AWS EC2 instance:
+Follow the following instructions to continuously capture images in real time from Raspberry Pi 3 board and sending requests with images to AWS EC2 instance.
+
+On Raspberry Pi 3 board terminal, clone the repository and change to directory for Raspberry Pi in the repository:
 ```
 git clone git@github.com:anhtu-pham/Parking-Spot-Detection-System.git
-cd Parking-Spot-Detection-System/Raspberry_Pi_part/src/
+cd Parking-Spot-Detection-System/Raspberry_Pi_part/
+```
+In this directory, src provides the entire program needed to run for the Raspberry Pi 3 board. Change directory into src, provide executable permission for driver.py, then run this file.
+```
+cd src/
 chmod a+x driver.py
 ./driver.py
 ```
-Then open up another terminal for AWS EC2 instance, and run the following commands to receive requests with images and prepare for updating image display on website:
+After running driver.py file on Raspberry Pi 3 board terminal, open up another terminal for AWS EC2 instance, and follow the following instructions to receive requests with images and prepare for updating image display on website.
+
+Clone the repository again, but now change to directory for Cloud (AWS EC2 instance) in the repository:
 ```
 git clone git@github.com:anhtu-pham/Parking-Spot-Detection-System.git
-cd Parking-Spot-Detection-System/Cloud_part/src/
+cd Parking-Spot-Detection-System/Cloud_part/
+```
+In this directory, src provides the entire program needed to run for AWS EC2 instance. Now change directory into src, provide executable permission for web_driver.py, then run this file.
+```
+cd src/
 chmod a+x web_driver.py
 ./web_driver.py
 ```
