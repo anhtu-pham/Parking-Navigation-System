@@ -22,7 +22,7 @@ Software: [OpenCV](https://opencv.org), [Socket.IO](https://socket.io), [Flask](
 
 ## Instructions
 
-In order to run the system, the [Raspberry Pi Camera](https://www.raspberrypi.com/products/camera-module-v3/) needs to be attached to [Raspberry Pi 3 board](https://www.raspberrypi.com/products/raspberry-pi-3-model-b/), and setup on Raspberry Pi 3 board terminal should be performed before working with AWS EC2 instance.
+In order to run the system, the [Raspberry Pi Camera](https://www.raspberrypi.com/products/camera-module-3/) needs to be attached to [Raspberry Pi 3 board](https://www.raspberrypi.com/products/raspberry-pi-3-model-b/), and setup on Raspberry Pi 3 board terminal should be performed before working with AWS EC2 instance.
 
 Follow the following instructions to continuously capture images in real time from Raspberry Pi 3 board and send requests with images to AWS EC2 instance.
 
