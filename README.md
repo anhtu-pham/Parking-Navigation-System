@@ -22,9 +22,9 @@ Software: [OpenCV](https://opencv.org), [Socket.IO](https://socket.io), [Flask](
 
 ## Instructions
 
-In order to run the system, the [Raspberry Pi Camera](https://www.raspberrypi.com/products/camera-module-v3/) needs to be attached to [Raspberry Pi 3 board](https://www.raspberrypi.com/products/raspberry-pi-3-model-b/), and setup commands on Raspberry Pi 3 board terminal should be performed before working with AWS EC2 instance.
+In order to run the system, the [Raspberry Pi Camera](https://www.raspberrypi.com/products/camera-module-v3/) needs to be attached to [Raspberry Pi 3 board](https://www.raspberrypi.com/products/raspberry-pi-3-model-b/), and setup on Raspberry Pi 3 board terminal should be performed before working with AWS EC2 instance.
 
-Follow the following instructions to continuously capture images in real time from Raspberry Pi 3 board and sending requests with images to AWS EC2 instance.
+Follow the following instructions to continuously capture images in real time from Raspberry Pi 3 board and send requests with images to AWS EC2 instance.
 
 On Raspberry Pi 3 board terminal, clone the repository and change to directory for Raspberry Pi in the repository:
 ```
@@ -37,7 +37,7 @@ cd src/
 chmod a+x driver.py
 ./driver.py
 ```
-After running driver.py file on Raspberry Pi 3 board terminal, open up another terminal for AWS EC2 instance, and follow the following instructions to receive requests with images and prepare for updating image display on website.
+After running driver.py file on Raspberry Pi 3 board terminal, open up another terminal for AWS EC2 instance, and follow the following instructions to receive requests with images through event-based methodology and prepare for updating real-time image display on website.
 
 On AWS EC2 instance terminal, clone the repository again, but now change to directory for Cloud (AWS EC2 instance) in the repository:
 ```
@@ -50,4 +50,4 @@ cd src/
 chmod a+x web_driver.py
 ./web_driver.py
 ```
-The website is now ready. Image streaming can be seen in the [website link](http://ec2-3-223-161-13.compute-1.amazonaws.com:5000/)
+The website is now ready. Image streaming can be seen in website link: [http://ec2-3-223-161-13.compute-1.amazonaws.com:5000/].
