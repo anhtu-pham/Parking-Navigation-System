@@ -39,7 +39,7 @@ chmod a+x driver.py
 ```
 After running driver.py file on Raspberry Pi 3 board terminal, open up another terminal for AWS EC2 instance, and follow the following instructions to receive requests with images and prepare for updating image display on website.
 
-Clone the repository again, but now change to directory for Cloud (AWS EC2 instance) in the repository:
+On AWS EC2 instance terminal, clone the repository again, but now change to directory for Cloud (AWS EC2 instance) in the repository:
 ```
 git clone git@github.com:anhtu-pham/Parking-Spot-Detection-System.git
 cd Parking-Spot-Detection-System/Cloud_part/
