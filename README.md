@@ -1,4 +1,4 @@
-[![logo](![openspot_logo](https://github.com/anhtu-pham/Parking-Spot-Detection-System/assets/80482507/b2b285be-240d-408a-abb6-f11b0906292b))](http://ec2-3-223-161-13.compute-1.amazonaws.com:5000/)
+[![openspot_logo](https://github.com/anhtu-pham/Parking-Spot-Detection-System/assets/80482507/d93f822a-0bf5-415a-a224-46344b7a4d37)](http://ec2-3-223-161-13.compute-1.amazonaws.com:5000/)
 
 # OpenSpot: A Parking Spot Detection System
 
