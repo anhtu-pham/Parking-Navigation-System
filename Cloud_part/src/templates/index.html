@@ -44,36 +44,46 @@
 
         .dynamic-image {
             display: block;
-            margin: 0 auto; /* Reduce margin to bring the image closer */
+            margin: 2vh auto; /* Reduce margin to bring the image closer */
 	    width: auto;
-	    height: 100vh;
-	    max-height: 100vh;
-	    max-width: 100%;
-	    /* object-fit: contain; */
-	    /* object-position: center; */
-            max-width: 100%;
+	    height: auto;
+	    max-height: 90vh;
+	    max-width: 90vw;
+	    object-fit: contain;
+	    object-position: center;
+            /* max-width: 100%; */
             border-radius: 15px; /* Rounded corners */
 	    box-shadow: none;
-            /* box-shadow: 0 0 20px rgba(255, 255, 255, 0.2); */ /* Soft inner glow */
+            box-shadow: 0 0 20px rgba(255, 255, 255, 0.2); /* Soft inner glow */
         }
+
+        
 
     </style>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/4.0.1/socket.io.js"></script>
-    <script>
+<!--    <script>
         var socket = io.connect("http://" + document.domain + ":" + location.port + "/");
         socket.on("image_update", function(data) {
             document.getElementById("stream").src = "data:image/jpeg;base64," + data;
         });
     </script>
+-->
 
 </head>
 <body>
     <div class="header"> 
-	<img class="logo" src="path/to/logo" alt="Logo">
+	<img class="logo" src="logo.png" alt="Logo">
     </div>
 
+<!--
     <div class="container">
         <img class="dynamic-image" id="stream" src="" alt="">
     </div>
+-->
+    <video controls autoplay loop class="dynamic-image" id="stream">
+        <source src="parking_lot_1.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+
 </body>
 </html>
