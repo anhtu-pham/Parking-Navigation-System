@@ -42,7 +42,10 @@ def perform_object_detection(image_data):
             (x, y) = (boxes[i][0], boxes[i][1])
             (w, h) = (boxes[i][2], boxes[i][3])
             cv2.rectangle(image, (x, y), (x+w, y+h), [0, 0, 255], 2)
-            text = "{}: {:.2f}".format(classes[classIDs[i]], confidences[i])
-            cv2.putText(image, text, (x, y-5), cv2.FONT_HERSHEY_SIMPLEX, 0.5, [0, 0, 255], 1)
-    
+            try:
+                text = "{}: {:.2f}".format(classes[classIDs[i]], confidences[i])
+                cv2.putText(image, text, (x, y-5), cv2.FONT_HERSHEY_SIMPLEX, 0.5, [0, 0, 255], 1)
+            except IndexError:
+                pass
+
     cv2.imwrite(os.getcwd() + "/templates/temp_image.jpg", image)
