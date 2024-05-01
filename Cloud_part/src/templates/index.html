@@ -46,9 +46,8 @@
             display: block;
             margin: 2vh auto; /* Reduce margin to bring the image closer */
 	    width: auto;
-	    height: auto;
-	    max-height: 90vh;
-	    max-width: 90vw;
+	    height: 100vh;
+	    max-width: 100%;
 	    object-fit: contain;
 	    object-position: center;
             /* max-width: 100%; */
@@ -61,29 +60,38 @@
 
     </style>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/4.0.1/socket.io.js"></script>
-<!--    <script>
-        var socket = io.connect("http://" + document.domain + ":" + location.port + "/");
-        socket.on("image_update", function(data) {
-            document.getElementById("stream").src = "data:image/jpeg;base64," + data;
-        });
-    </script>
+    <script>
+	var socket = io.connect("http://" + document.domain + ":" + location.port + "/");
+        socket.on("upload", function() {
+            // var image = new Image();
+            // image.onload = function() {
+            //    document.getElementById("stream").src = "/image";
+            // }
+            document.getElementById("stream").src = "/image?" + new Date().getTime();
+	});
+<!--
+        //    image.src = "data:image/jpeg;base64," + data;
+        // }); 
 -->
+    </script>
 
 </head>
 <body>
+<!--    
     <div class="header"> 
 	<img class="logo" src="logo.png" alt="Logo">
     </div>
+-->
+
+    <div class="container">
+        <img class="dynamic-image" id="stream" src="/image" alt="">
+    </div>
 
 <!--
-    <div class="container">
-        <img class="dynamic-image" id="stream" src="" alt="">
-    </div>
--->
     <video controls autoplay loop class="dynamic-image" id="stream">
         <source src="parking_lot_1.mp4" type="video/mp4">
         Your browser does not support the video tag.
     </video>
-
+-->
 </body>
 </html>
