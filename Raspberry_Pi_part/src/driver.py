@@ -40,4 +40,3 @@ for _ in camera.capture_continuous(stream, format="jpeg", use_video_port=True):
     # response = requests.post(ec2_instance_url, files=files)
     stream.seek(0)
     stream.truncate()
-    time.sleep(1.5)
