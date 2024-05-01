@@ -11,8 +11,7 @@ A machine learning detection model like [YOLO](https://pjreddie.com/darknet/yolo
 
 ## Project Constraints:
 1. This project will not account for vibrations and shaking captured in camera images caused by bad weather conditions.
-2. This project will detect parking spots for medium cars as the exemplification of an arbitrary car.
-3. With the allowed duration, we develop fundamental functionalities with a simple user interface to guarantee the system’s deployability. However, we still allow for more advanced features to be integrated into the project in the future.
+2. With the allowed duration, we develop fundamental functionalities with a simple user interface to guarantee the system’s deployability. However, we still allow for more advanced features to be integrated into the project in the future.
 
 
 ## Hardware and Software Resources
@@ -22,24 +21,11 @@ Software: [OpenCV](https://opencv.org), [Socket.IO](https://socket.io), [Flask](
 
 ## Instructions
 
-In order to run the system, the [Raspberry Pi Camera](https://www.raspberrypi.com/products/camera-module-3/) needs to be attached to [Raspberry Pi 3 board](https://www.raspberrypi.com/products/raspberry-pi-3-model-b/), and setup on Raspberry Pi 3 board terminal should be performed before working with AWS EC2 instance.
+In order to run the system, the [Raspberry Pi Camera](https://www.raspberrypi.com/products/camera-module-3/) needs to be attached to [Raspberry Pi 3 board](https://www.raspberrypi.com/products/raspberry-pi-3-model-b/), and setup on AWS EC2 instance terminal should be performed before working with Raspberry Pi 3 terminal.
 
-Follow the following instructions to continuously capture images in real time from Raspberry Pi 3 board and send requests with images to AWS EC2 instance.
+Follow the following instructions to prepare for receiving requests with images through event-based methodology and updating real-time image display on website.
 
-On Raspberry Pi 3 board terminal, clone the repository and change to directory for Raspberry Pi in the repository:
-```
-git clone git@github.com:anhtu-pham/Parking-Spot-Detection-System.git
-cd Parking-Spot-Detection-System/Raspberry_Pi_part/
-```
-In this directory, src provides the entire program needed to run for the Raspberry Pi 3 board. Change directory into src, provide executable permission for driver.py, then run this file.
-```
-cd src/
-chmod a+x driver.py
-./driver.py
-```
-After running driver.py file on Raspberry Pi 3 board terminal, open up another terminal for AWS EC2 instance, and follow the following instructions to receive requests with images through event-based methodology and prepare for updating real-time image display on website.
-
-On AWS EC2 instance terminal, clone the repository again, but now change to directory for Cloud (AWS EC2 instance) in the repository:
+On AWS EC2 instance terminal, clone the repository, and change to directory for Cloud (AWS EC2 instance) in the repository:
 ```
 git clone git@github.com:anhtu-pham/Parking-Spot-Detection-System.git
 cd Parking-Spot-Detection-System/Cloud_part/
@@ -50,4 +36,18 @@ cd src/
 chmod a+x web_driver.py
 ./web_driver.py
 ```
-The website is now ready. Image streaming can be seen in website link: http://ec2-3-89-122-140.compute-1.amazonaws.com/.
+
+After running on AWS EC2 instance terminal, open up another terminal for Raspberry Pi 3 terminal, and follow the following instructions to continuously capture images in real time from Raspberry Pi 3 board and send requests with images to AWS EC2 instance.
+
+On Raspberry Pi 3 terminal, clone the repository again, but now change to directory for Raspberry Pi in the repository:
+```
+git clone git@github.com:anhtu-pham/Parking-Spot-Detection-System.git
+cd Parking-Spot-Detection-System/Raspberry_Pi_part/
+```
+In this directory, src provides the entire program needed to run for the Raspberry Pi 3 board. Change directory into src, provide executable permission for driver.py, then run this file.
+```
+cd src/
+chmod a+x driver.py
+./driver.py
+```
+The website is now ready. Image streaming can be seen in website link: [http://ec2-3-223-161-13.compute-1.amazonaws.com:5000/]
