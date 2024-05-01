@@ -30,7 +30,7 @@ On AWS EC2 instance terminal, clone the repository, and change to directory for 
 git clone git@github.com:anhtu-pham/Parking-Spot-Detection-System.git
 cd Parking-Spot-Detection-System/Cloud_part/
 ```
-In this directory, src provides the entire program needed to run for AWS EC2 instance. Now change directory into src, provide executable permission for web_driver.py, then run this file.
+In this directory, src provides the entire program needed to run for AWS EC2 instance. Change directory into src, provide executable permission for web_driver.py, then run this file.
 ```
 cd src/
 chmod a+x web_driver.py
@@ -44,10 +44,10 @@ On Raspberry Pi 3 terminal, clone the repository again, but now change to direct
 git clone git@github.com:anhtu-pham/Parking-Spot-Detection-System.git
 cd Parking-Spot-Detection-System/Raspberry_Pi_part/
 ```
-In this directory, src provides the entire program needed to run for the Raspberry Pi 3 board. Change directory into src, provide executable permission for driver.py, then run this file.
+In this directory, src provides the entire program needed to run for the Raspberry Pi 3 board. Now change directory into src, provide executable permission for driver.py, then run this file.
 ```
 cd src/
 chmod a+x driver.py
 ./driver.py
 ```
-The website is now ready. Image streaming can be seen in website link: [http://ec2-3-223-161-13.compute-1.amazonaws.com:5000/]
+The website is now ready. Image streaming can be seen in website link: http://ec2-3-223-161-13.compute-1.amazonaws.com:5000/.
