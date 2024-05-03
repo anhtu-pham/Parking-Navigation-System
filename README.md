@@ -3,7 +3,7 @@
 # OpenSpot: A Parking Spot Detection System
 
 ## Description
-OpenSpot is an IoT system that allows users to find an open parking spot in parking lots. Using an image processing solution with a machine learning approach through [YOLO](https://pjreddie.com/darknet/yolo/), OpenSpot will give real-time feedback on parking situations.
+OpenSpot is an IoT system that allows users to remotely detect and navigate around obstacles in the parking lot to find open parking spots. Using an image processing solution with a machine learning approach through [YOLO](https://pjreddie.com/darknet/yolo/), OpenSpot will give real-time feedback on parking situations.
 
 As shown in the graph of our project’s system architecture below, a camera attached to the [Raspberry Pi 3 board](https://www.raspberrypi.com/products/raspberry-pi-3-model-b/) captures and streams images of the parking lot. Images, along with corresponding data, are sent from [Raspberry Pi 3 board](https://www.raspberrypi.com/products/raspberry-pi-3-model-b/) through an Amazon Web Services (AWS) t2.micro [EC2 instance](https://aws.amazon.com/ec2/instance-types/?p=itt#general-purpose). An image processing algorithm finds open parking spots, and the result is shown in real-time on a simple web interface on the user’s device. The system could detect not only the occupying cars, but also other objects that can be present and occupy the parking lots’ spaces, some of which include trucks, buses, bicycles, motorbikes, and humans. This can further help users in detecting a wide variety of obstacles in the parking lot remotely and find open spots more easily.
 
