@@ -36,7 +36,5 @@ for _ in camera.capture_continuous(stream, format="jpeg", use_video_port=True):
             print("Failed to send")
     except Exception as e:
         print("Error:", e)
-    # files = {"image": ("~/parking_web/images/image.jpg", stream.getvalue())}
-    # response = requests.post(ec2_instance_url, files=files)
     stream.seek(0)
     stream.truncate()

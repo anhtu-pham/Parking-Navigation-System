@@ -18,7 +18,6 @@ image_data = None
 @socketio.on("connect", namespace="/")
 def handle_connect():
 	print("Client connected")
-	# emit("image_update", image_data)
 
 @socketio.on("image_update", namespace="/")
 def handle_image_update(data):
