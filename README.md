@@ -51,3 +51,5 @@ chmod a+x driver.py
 ./driver.py
 ```
 The project is now ready with the website link: http://ec2-3-223-161-13.compute-1.amazonaws.com:5000/.
+
+Note: I will turn on AWS EC2 instance when I need to use it. This project can still be used for another instance.
