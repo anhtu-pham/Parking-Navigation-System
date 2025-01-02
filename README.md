@@ -25,12 +25,14 @@ In order to run the system, the [Raspberry Pi Camera](https://www.raspberrypi.co
 
 Follow the following instructions to prepare for receiving requests with images through event-based methodology and updating real-time image display on website.
 
+Use AWS EC2 instance that you have already had, or create a new AWS EC2 instance based on this [link](https://aws.amazon.com/ec2/).
+
 On the AWS EC2 instance terminal, clone the repository, and change to directory for Cloud (AWS EC2 instance) in the repository:
 ```
 git clone git@github.com:anhtu-pham/Parking-Spot-Detection-System.git
 cd Parking-Spot-Detection-System/Cloud_part/
 ```
-In this directory, src provides the entire program needed to run for AWS EC2 instance. Change directory into src, ensure that Flask, Flask-SocketIO, OpenCV, NumPy are installed, then provide executable permission for web_driver.py and run this file.
+In this directory, src provides the program needed to run for AWS EC2 instance. Change directory into src, ensure that Flask, Flask-SocketIO, OpenCV, NumPy are installed, then provide executable permission for web_driver.py and run this file.
 ```
 cd src/
 chmod a+x web_driver.py
@@ -44,12 +46,10 @@ On Raspberry Pi 3 terminal, clone the repository again, but now change to direct
 git clone git@github.com:anhtu-pham/Parking-Spot-Detection-System.git
 cd Parking-Spot-Detection-System/Raspberry_Pi_part/
 ```
-In this directory, src provides the entire program needed to run for the Raspberry Pi 3 board. Now change directory into src, ensure that Picamera, Requests, Socket.IO are installed, then provide executable permission for driver.py and run this file.
+In this directory, src provides the program needed to run for the Raspberry Pi 3 board. Now change directory into src, update ec2_instance_url in driver.py based on corresponding URL for your AWS EC2 instance (ec2_instance_url has format like http://3.223.161.13:5000/), ensure that Picamera, Requests, Socket.IO are installed, then provide executable permission for driver.py and run this file.
 ```
 cd src/
 chmod a+x driver.py
 ./driver.py
 ```
-The project is now ready with the website link: http://ec2-3-223-161-13.compute-1.amazonaws.com:5000/.
-
-Note: I will turn on AWS EC2 instance when I accept request to use it. This project can still be used for another AWS EC2 instance with corresponding configuration.
+The project is now ready. Open the website corresponding to your AWS EC2 instance. The website link has format like http://ec2-3-223-161-13.compute-1.amazonaws.com:5000/.
